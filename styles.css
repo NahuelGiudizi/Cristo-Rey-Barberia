@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo1 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  filter: grayscale(32%);
+  -webkit-filter: grayscale(32%);
+  -moz-filter: grayscale(32%);
+}
+@media (orientation: landscape) {
+  #myVideo2 {
+    display: none;
+  }
+  .close-modal {
+    display: flex;
+    margin-top: 3vh;
+    margin-right: 5vh;
+  }
+}
+@media (orientation: portrait) {
+  #myVideo1 {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  iframe {
+    width: 130vw;
+  }
+}
+@media (min-width: 600px) {
+  .logoContainer {
+    width: 70vh;
+  }
+}
+
+#myVideo2 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  filter: grayscale(32%);
+  -webkit-filter: grayscale(32%);
+  -moz-filter: grayscale(32%);
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  height: 20vh;
+  display: flex;
+  position: relative;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  justify-content: center;
+  background: linear-gradient(to top left, #28b487, #7dd56f);
+}
+
+.show-modal {
+  font-family: "Yatra One";
+  font-weight: 400;
+  font-size: 3vh;
+  color: #fff;
+  background-color: #0066cc;
+  padding: 3vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  border-radius: 3vh;
+  transition: 1000ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  height: fit-content;
+  width: fit-content;
+  border: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.5vh;
+  right: 0.5vh;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1 {
+  display: flex;
+  margin: auto;
+  font-size: 2.5rem;
+  margin-bottom: 1vh;
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+/* -------------------------- */
+/* CLASSES TO MAKE MODAL WORK */
+.hidden {
+  display: none;
+}
+
+.modal {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url("./src/background.jpg");
+  padding: 2vh;
+  border-radius: 3vh;
+  z-index: 10;
+  box-shadow: 0px 0px 38px 21px rgba(0, 0, 0, 0.74);
+  -webkit-box-shadow: 0px 0px 38px 21px rgba(0, 0, 0, 0.74);
+  -moz-box-shadow: 0px 0px 38px 21px rgba(0, 0, 0, 0.74);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.show-modal:hover {
+  transition: 1000ms;
+  padding: 10px 50px;
+  transform: translateY(-0px);
+  background-color: #fff;
+  color: #0066cc;
+}
+.btnBnd {
+  justify-self: center;
+  position: initial;
+  margin: auto;
+  border-radius: 3vh;
+  display: flex;
+  height: fit-content;
+  padding: 1vh;
+  background-image: url(./src/background.jpg);
+}
+.logo {
+  width: 80vw;
+  margin: auto;
+  height: 11vh;
+}
+.logoContainer {
+  margin-top: 1vh;
+  display: flex;
+  margin: auto;
+  padding: 1vh;
+  background-image: url("./src/background.jpg");
+}
+.wpPng {
+  cursor: pointer;
+  margin: 1vh;
+  box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.231);
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.256);
+  -moz-box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.164);
+  border-radius: 2vh;
+  height: 12vh;
+}
+footer {
+  padding: 2vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+}
+.modalBackground {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2vh;
+  height: fit-content;
+  border: 0.4vh solid black;
+  padding: 2vh;
+  border-radius: 3vh;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+}
+iframe {
+  margin: auto;
+  position: relative;
+  display: flex;
+  width: 50vw;
+  height: 35vh;
+  border-radius: 2vh;
+}

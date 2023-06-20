@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbería Cristo Rey</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="./src/favicon.ico" />
+  </head>
+  <body>
+    <video autoplay muted loop playsinline id="myVideo1">
+      <source src="./src/3.mp4" type="video/mp4" />
+    </video>
+    <video autoplay muted loop playsinline id="myVideo2">
+      <source src="./src/1.mp4" type="video/mp4" />
+    </video>
+    <!-- Optional: some overlay text to describe the video -->
+    <div class="content">
+      <div class="logoContainer">
+        <img src="./src/logo.png" class="logo" />
+      </div>
+
+      <!-- Use a button to pause/play the video with JavaScript -->
+    </div>
+    <div class="containerModal">
+      <div class="modal hidden">
+        <div class="modalBackground">
+          <button class="close-modal"> &times; </button>
+          <h1><u>TURNOS:</u></h1>
+          <h2>Sigue este enlace via WhatsApp:</h2>
+          <a
+            href="https://api.whatsapp.com/send/?phone=542236336198&text=Hola%21+Me+darias+un+turno%3F%21&type=phone_number&app_absent=0"
+          >
+            <img class="wpPng" src="./src/Wp.png" alt="" />
+          </a>
+
+          <h3><u>Horarios</u></h3>
+          <p>MARTES A SABADOS de 9 a 21:00hs</p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12585.077737480458!2d-57.5390983!3d-37.9474944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9584dbc93d0b729b%3A0xa8217fe9a4c8e298!2sCristo%20Rey%20peluqueria!5e0!3m2!1ses!2sar!4v1687277333990!5m2!1ses!2sar"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+    <footer class="footerClass">
+      <div class="btnBnd">
+        <button class="show-modal">Pedi tu turno!</button>
+      </div>
+    </footer>
+    <div class="overlay hidden"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
